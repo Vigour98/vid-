@@ -1,0 +1,1045 @@
+::selection{
+    background:red;
+    color:yellow;
+}
+::-webkit-scrollbar{
+	width:15px;
+}
+::-webkit-scrollbar-track{
+	background: white;
+}
+
+::-webkit-scrollbar-thumb{
+	background:grey;
+}
+
+input[type="radio"]{
+    appearance:none;
+    -webkit-appearance:none;
+    border-radius:50%;
+    background:#fff;
+    border:3px solid #fff;
+    outline:2px solid grey; 
+    box-shadow:0px 0px 2x 2px black; 
+}
+
+input[type="radio"]:checked{
+    background:grey;
+}
+.checked{
+    display:none;
+}
+.all{   
+    position:relative; 
+    min-height:100vh;
+    width:100%;
+    background:url('images/bg1.png') ;
+    background-position:cover;
+    background-repeat: repeat; 
+
+     
+}
+
+.home_header{
+    display:flex;      
+    align-items:center; 
+    border-bottom:2px solid grey;    
+    height:100px;
+}
+.home_header a{
+    margin-right: 25%;    
+    margin-left:10px;
+}
+.pic{
+    width:50px;
+    height:50px;   
+    opacity:0.5;
+}
+.for_h1{    
+    display:flex;  
+    align-items:center;
+    justify-content: left;   
+}
+.for_h1 h1{
+    background:linear-gradient(to bottom, black,grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display:inline;
+    font-size:4rem;
+    margin-left:0%; 
+}
+.for_h1 img{
+    width:100px;
+    height:60px; 
+    margin-right:0%; 
+    box-shadow:0px 0px 0px 0px black;
+    border:0px solid black;
+    border-radius:0px;      
+}
+
+.prov_list{    
+    width:100%; 
+    display:flex;   
+    justify-content: center;       
+}
+
+.prov_list ul{    
+    display:flex;
+    justify-content: center;
+    list-style-type:none;     
+    width:100%;  
+    margin-left:-4%;
+}
+.prov_list ul li{
+    background:radial-gradient(white,black);
+    color:black;   
+    font-weight:bold;   
+    box-shadow:2px 2px 2px black;
+    border-radius:5px;  
+    padding:5px;
+    margin-left:1%;  
+    transition:all .2s ease;
+}
+.prov_list ul li:hover{
+    transition:all .2s ease;
+    transform:scale(1.05);
+}
+.list_detail{
+    display:flex;
+    flex-direction:column;    
+}
+
+.header{    
+    display:flex;  
+    justify-content:space-around;     
+    padding-top:20px; 
+    border-bottom:2px solid black; 
+}
+
+.prevB img{
+    width:80px;
+    height:80px;
+}
+.name{   
+    font-size:3rem;
+    font-weight:bold;
+    background:linear-gradient(to bottom, black,grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+.time{
+    display:flex;   
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;    
+    border-radius:10px;    
+    font-weight:bold;
+}
+
+.time img{
+    width:40px;
+    height:40px;
+}
+.min_sec{
+    display:flex;
+    font-size:20px;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center; 
+    margin-top:20px;         
+}
+.single_question{    
+    display:none;     
+    box-shadow: 0px 0px 2px 2px grey, 0px 0px 4px 4px black;  
+    border-radius:10px;
+    width:60%;    
+    padding-left:2%; 
+    padding-right:2%;  
+}
+.qsn_txt{   
+    margin-bottom: 0px; 
+    width:100%;    
+    color:black;    
+    font-weight:bold;
+    font-size:1.5rem;      
+}
+.radio{
+    height:20px;
+    width:20px;        
+}
+.first_q{
+    margin-top:5px;    
+} 
+.single_question label{
+    font-size:1.1rem;
+    font-weight:bold;
+    color:rgb(27, 25, 25);
+    text-shadow:0.5px 0.5px 0.5px black;
+}   
+.prev_next{
+    display:flex;
+    justify-content:space-between;
+}
+.prev{
+       
+}
+.prev img, .next img{
+    width:50px;
+    height:50px;
+}
+.next:hover, .prev:hover{
+    transition:all .2s ease;
+    transform:scale(1.3); 
+}
+.finish{
+    background:linear-gradient(to bottom, rgb(0, 0, 0),grey);
+    font-weight:bold;
+    font-size:1.5rem;
+    margin-top:10px;      
+    border-radius:5px; 
+    box-shadow:0px 0px 2px 2px black;  
+    color:black;     
+    padding:5px;  
+    margin-bottom:5px;  
+}
+
+.finish:hover{       
+    background:linear-gradient(to top, rgb(0, 0, 0),grey);        
+}
+.thePicQ{
+    width:40%;
+    height:25vh;
+    margin-left:20%;
+    border-radius:10px;
+    box-shadow:0px 0px 2.5px 2.5px grey, 0px 0px 5px 5px black;
+    margin-top:10px;
+}
+.prog{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    padding-left: 1%;    
+}
+
+.round{
+    border-radius:50%;
+    width:3%;
+    margin-right:1%;
+    background:black;
+    color:grey;
+    font-weight:bold;
+    text-align:center;
+    transition:all .5s ease;
+}
+
+.round:hover{
+    transition:all .5s ease;
+    background:grey;
+    color:black;    
+}
+
+
+/** the details page **/
+.detail{ 
+    display:flex;
+    justify-content:center;    
+    width:100%;
+}
+
+.hide{
+    display:none;
+}
+.init{    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:80%;   
+}
+/* introduction */
+.introduction h1{    
+    margin-top:0px;
+    margin-bottom:5px;
+    color:black;
+    text-shadow:0.2px 0.2px 0.2px grey;
+    
+}
+
+.introduction p{   
+    width:90%;
+    display:inline;
+    margin-left:0%;
+    margin-top:0px;
+    font-size:25px;    
+}
+/* end of introductiion */
+
+/* about */
+
+.about h1{
+    margin-top:20px;
+    margin-bottom:0px; 
+    color:black;   
+    text-shadow:o.2px 0.2px 0.2px grey;
+}
+
+.the_Ps{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:25px;
+    width:100%;
+    align-items:left;
+    
+}
+
+.the_Ps h2{
+    margin-top:10px;
+    margin-bottom:5px; 
+    margin-left:5%;       
+    font-size:25px;
+    color:rgb(27, 25, 25);
+    text-shadow:0.2px 0.2px 0.2px black;
+}
+
+
+.about p{
+    margin-top:0px;
+    margin-bottom:0px;   
+    width:100%;
+    margin-left:10%;
+}
+
+/* end of about */
+
+/* classes */
+.classes h1{    
+    margin-bottom:5px;
+    margin-top: 10px;
+    margin-left:-63%;
+    color:black;
+    text-shadow:0.2px 0.2px 0.2px grey;
+}
+.Ps{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:25px;
+    width:100%;
+    align-items:center;  
+}
+
+.Ps p{
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-left:0px;
+    margin-right:0px;    
+    width:90%;
+}
+
+/* end of classes */
+
+/* rules */
+.rules h1{
+    display:inline;    
+    margin-top: 5px;
+    margin-bottom:5px;
+    font-size:27px;
+    color:black;
+    text-shadow:0.2px 0.2px 0.2px grey;
+}
+.rulesP{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:24px;
+    width:100%;
+    align-items:center;
+}
+
+.rulesP h2{
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:20px;
+    margin-left:-83%;
+    color:rgb(27,25,25);
+    text-shadow:0.2px 0.2px 0.2px black;
+    }
+
+.rules p{
+    margin-top:0px;
+    margin-bottom: 3px;
+    width:90%; 
+    margin-left:5%;     
+}
+
+/* end of rules */
+
+/* con_sig*/
+
+.con_sig h1{
+    display:inline;
+    color:black;
+    text-shadow:0.2px 0.2px 0.2px grey;
+    letter-spacing: 3px;
+    font-weight:bold;
+    margin-top:5px;
+    margin-bottom:0px;
+    font-size:23px;
+}
+.conP{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:25px;
+    width:100%;    
+}
+.conP h3{
+    margin-bottom:0px;
+    margin-top:0px;    
+    color:rgb(27,25,25);
+    text-shadow:0.2px 0.2px 0.2px black;
+    font-size:1.3rem;
+    width:20%;    
+    margin-left:-70%;
+    text-decoration:underline;
+}
+.conP p{    
+    margin-bottom:0px;
+    margin-top:0px;
+    width:90%;
+    font-size:1.3rem;
+}
+
+/* end of con_sig */ 
+
+/* manov */
+
+.manov h1{
+    display:inline;    
+    color:black;
+    text-shadow:0.2px 0.2px 0.2px grey;
+    letter-spacing: 3px;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+.start_change, .turn_lane,
+.pull_straight{
+    display:flex;
+    justify-content:space-around;    
+    width:100%;
+}
+
+.start_ve h4, .change_g h4,
+.turnR h4, .laneC h4,
+.pullS h4, .straightP h4,
+.switch_off h4{    
+    margin-top:0px;
+    margin-bottom:0px;
+    color:rgb(27,25,25);
+    text-shadow:0.2px 0.2px 0.2px black;
+}
+
+.start_ve p, .change_g p,
+.turnR p, .laneC p,
+.pullS p, .straightP p,
+.switch_off p{    
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight:bold;
+}
+.switch_off{
+    width:35%;
+    box-shadow:0px 0px 2px 2px black;
+}
+.turnR, .laneC{
+    width:30%;
+    box-shadow:0px 0px 2px 2px black;
+}
+
+.turn_lane, .pull_straight{
+    margin-top:10px;
+}
+
+.pullS,.straightP,
+.start_ve , .change_g{
+    width:49%;
+    box-shadow:0px 0px 2px 2px black;
+    border-radius:10px;
+}
+
+/* end of manov */
+
+/* dist */
+.dist h1{
+    display:inline;    
+    color:black;
+    text-shadow:0.2px 0.2px 0.2px grey;
+    letter-spacing: 3px;
+    margin-top:0px;
+    margin-bottom: 0px;   
+}
+
+.distP{
+    display:flex;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+   
+}
+
+.distP p{
+    margin-top:0px;
+    margin-bottom:20px;
+    font-size:25px;
+}
+.distP table tr{
+    box-shadow:0px 0px 2.5px 2.5px black;
+    font-size:20px;
+}
+.distP table tr:nth-child(odd){
+  background:grey;
+}
+
+.distP table tr th,.distP table td{
+    width:25%;   
+    text-align:center;
+}
+
+/* end of class dist */
+
+/* home.html */
+.car_bg{
+    background:url('images/car3.png') repeat-y center center/cover;
+    width:100%;
+    height:100vh;
+    position:absolute;
+    overflow:hidden;
+}
+.h_header{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background:black;    
+    width:50%;
+    height:20vh;
+    color:#fff;
+    animation:yung 15s infinite;  
+    font-family:bignoodletitling; 
+    font-size:.7rem;   
+}
+.h_header img{
+    width:40px;
+    height:40px;
+}
+
+@keyframes yung{
+    0%, 10%{       
+       color:whitesmoke;                    
+    }        
+    20%{
+        color:rgb(100, 98, 98);            
+    }
+    90%{
+        color:whitesmoke;           
+    }
+    100%{
+        color:#fff;          
+    }
+}
+.test_arr{
+    position:absolute;
+    top:70%;
+    display:flex;   
+}
+.first_tic, .second_pic, .third_pic{
+    box-shadow: 0px 0px 10px 10px black;
+    border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background:whitesmoke; 
+    transition:all .2s ease-in-out; 
+    overflow:hidden; 
+}
+.first_tic:hover,.second_pic:hover, .third_pic:hover{
+    transition:all .2s ease-in-out;
+    transform:scale(1.1);
+}
+
+.first_tic{
+    margin-left:20px;
+    margin-right:40px;
+}
+.second_pic{
+    margin-right:40px;
+}
+.t_icon, .p_icon{
+    width:100px;
+    height:70px;   
+}
+.t_icon img, .p_icon img{
+    width:100%;
+    height:80%;
+    border-radius:50%;
+    border:2px solid black;
+}
+.ds_t{
+    font-weight:bold;
+    background:black;
+    color:whitesmoke;
+    width:100%;
+    text-align: center;   
+}
+.test_arr a{
+    text-decoration:none;
+}
+
+
+/* end of home.html */
+
+/* results page */
+.results{     
+    height:95vh;
+    width:100%; 
+    background:url('images/bg1.png') no-repeat center center/cover;
+    position:absolute;  
+    overflow-y: scroll; 
+    overflow-x:hidden;
+}
+
+
+.mark, .total{
+    display:none;    
+}
+.results_rep{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-right:10px;
+}
+.results_rep h2{
+    display:inline;
+    margin-bottom:0%;
+    color:grey;
+}
+.perc{
+    font-weight:bold;
+    color:green;
+    font-size:30px;    
+    text-shadow:.2px .2px .2px yellow;
+}
+.res_img{
+    display:flex;  
+    justify-content: space-around;      
+    height:20vh;
+    border-bottom: 2px solid black;  
+    position:sticky;
+    left:0px;
+    top:0px;
+    background:black;  
+    color:grey;
+    font-weight:bold;
+    text-shadow:1px 1px 1px grey;
+}
+.h_btn a, .r_btn a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:20px;
+    width:70px;
+    height:80px;   
+    box-shadow:0px 0px 2px 2px grey; 
+    font-weight:bold;
+    text-decoration:none;
+    color:black;
+    transition:all .3s ease-in-out;
+    background:grey;
+    border-radius:10px;
+}
+.h_btn a:hover, .r_btn a:hover{
+    transition:all .3s ease-in-out;
+    transform:scale(1.1);
+}
+
+.h_btn img,.r_btn img{
+    width:90%;
+    height:75%;
+}
+.res_pic{
+    display:flex;    
+    justify-content:center;
+}
+
+.results h1{
+    margin-bottom:-20px;
+    text-align:center;
+    margin-top:0px;     
+}
+
+.car_r{
+    width:50%;
+    height:100%;
+}
+
+.car_r img{
+    height:100%;
+    width:100%;
+}
+
+.pare_of_corr{
+    display:flex;
+    flex-direction:column;
+    align-items:center;  
+    margin-top:1%;     
+}  
+.corrections, .corrections2{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;    
+    width:80%;  
+    margin-bottom:15px;  
+    box-shadow: 0px 0px 2px 2px grey, 0px 0px 4px 4px black;   
+}
+.corrections img, .corrections2 img{
+    margin-top:5px;
+    width:30%;
+    height:150px;
+    margin-bottom:0px;
+    margin-left:5%;
+    box-shadow:0px 0px 2.5px 2.5px grey, 0px 0px 5px 5px black;
+    border-radius:5px;
+}
+.corrections h3, .corrections2 h3{
+    display:flex;     
+    margin-top:0px;  
+    margin-bottom:0px;    
+    width:100%;    
+}
+.corrections h3 div, .corrections2 h3 div{
+    margin-right:5px;
+}
+.corrections p, .corrections2 p{
+   margin-top:0px;
+   margin-bottom:0px;  
+   color:rgb(27, 25, 25);   
+   width:100%;
+   font-size:25px;
+   font-weight:bold;
+   text-shadow:.5px .5px .5px black;
+}
+.corrections p i, .corrections2 p i{
+    margin-right:5px;   
+    font-weight:bold;
+}
+.corrections2 h3,
+.corrections2 p{
+    color:red;
+}
+
+.wheels div{
+    position:absolute;
+    width: 200px;
+    height:200px;
+    background-color:transparent;    
+  }
+.wheels div img{
+      width:100%;
+      height:100%;
+  }
+
+  .wheels div:nth-child(1){
+      top:60%;
+      left:42%;
+      animation:animate 10s linear infinite;
+  }
+
+  .wheels div:nth-child(2){
+    top:180%;
+    left:42%;
+    animation:animate 7s linear infinite;
+}
+
+.wheels div:nth-child(3){
+    top:300%;
+    left:42%;
+    animation:animate 9s linear infinite;
+}
+
+.wheels div:nth-child(4){
+    top:420%;
+    left:42%;
+    animation:animate 12s linear infinite;
+}
+
+.wheels div:nth-child(5){
+    top:540%;
+    left:42%;
+    animation:animate 12s linear infinite;
+}
+
+.wheels div:nth-child(6){
+    top:660%;
+    left:42%;
+    animation:animate 12s linear infinite;
+}
+
+.wheels div:nth-child(7){
+    top:780%;
+    left:42%;
+    animation:animate 12s linear infinite;
+}
+
+.wheels div:nth-child(8){
+    top:900%;
+    left:42%;
+    animation:animate 12s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform:scale(0) translateY(0) rotate(0);
+        opacity:1;
+    }
+    100%{
+        transform:scale(1.3) translateY(-90px) rotate(360deg);
+        opacity:0;
+    }
+}
+
+  /* end of results page */
+
+  
+  
+@media screen and (max-width: 800px){ 
+
+/* home.html page */
+.h_header{
+    width:100%;
+    justify-content:center;
+    font-size:0.4rem
+}
+
+.test_arr{
+    display:flex;
+    justify-content:space-around;  
+    width:100%;
+}
+.first_tic, .second_pic, .third_pic{
+    margin:0px;
+    box-shadow:0px 0px 3px 3px black;
+}
+
+.t_icon, .p_icon{
+    width:70px;
+    height:50px;   
+}
+
+/* end of home.html */
+
+/* the start of the test.html */
+.prevB img{
+    width:30px;
+    height:30px;
+}
+.name{
+    font-size:1.5rem;
+}
+
+.time img{
+    width:30px;
+    height:30px;
+}
+
+.min_sec{
+    font-size:.8rem;
+}
+.single_question{
+    width:90%;    
+}
+
+.thePicQ{
+    width:70%;
+    margin-left:15%;
+    height:30vh;   
+}
+.qsn_txt{
+    font-size:1.1rem;
+}
+.radio{
+    height:13px;
+    width:13px;
+}
+
+.single_question label{
+    font-size:1rem
+}
+.finish{
+    font-size:1rem;
+}
+.round{
+    width:5%;
+    font-size:.5rem;
+}
+/* end of test.html */
+
+/* the start of the results.html */
+.h_btn a, .r_btn a{
+    width:40px;
+    height:50px;
+    font-size:0.6rem;
+}
+
+.results_rep h2{
+    font-size:1rem;
+}
+
+.perc{
+    font-size:.8rem;
+}
+
+.p_f{
+    font-size:.8rem;
+}
+
+.car_r{
+    display:none;
+}
+
+.corrections, .corrections2{
+    width:90%
+}
+
+.corrections h3, .corrections2 h3{
+    font-size:1rem;
+}
+.corrections img, .corrections2 img{
+    width:50%;
+}
+
+.corrections p, .corrections2 p{
+    font-size:.8rem;
+}
+/* end of results.html */
+
+/* index.html */
+.home_header a{
+    margin-right: 5%; 
+}
+
+.for_h1 h1{
+    font-size:2rem;
+}
+
+
+
+.prov_list ul{    
+    flex-wrap:wrap;    
+    padding:0px;
+    margin-top:1px;
+}
+
+.prov_list ul li{
+    width:30%;
+    font-size:.7rem;
+    margin-bottom:4px;
+    padding:2px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.init{
+    width:100%;
+}
+.introduction h1{
+    font-size:1.5rem;
+}
+
+.introduction p{
+    font-size:1rem;
+}
+.about h1{   
+    width:100%;
+    font-size:1.3rem;
+}
+
+.about p{
+    margin-left:5%;
+    font-size:1rem;
+}
+
+.classes h1{
+    font-size:1.5rem;
+    margin-left:0%;
+}
+.Ps{
+    font-size:1rem;
+}
+
+.rules h1{
+    font-size:1.2rem;
+    width:100%;
+    text-align:center;
+}
+
+.rulesP h2{
+    margin-left:-80%;
+}
+
+.rules p{
+    font-size:1rem;
+}
+
+.con_sig h1{
+    font-size:1.2rem;
+}
+
+.conP p{
+    font-size:1rem;
+}
+
+.manov h1{
+    font-size:1.2rem;
+    margin-bottom:5px;
+}
+
+.turn_lane{
+    flex-direction: column;
+}
+.turnR,.laneC,.switch_off{
+    width:100%;
+    margin-bottom:5px;
+}
+
+
+.dist h1{
+    font-size:1.5rem;
+}
+
+.distP p{
+    font-size:1rem;
+}
+
+.distP table{    
+    width:100%;
+}
+
+.distP table tr th,
+.distP table tr td{   
+    font-size:10px;
+}
+/* end of index.html */ 
+
+
+}/* end of media screen  max-width of 700px*/

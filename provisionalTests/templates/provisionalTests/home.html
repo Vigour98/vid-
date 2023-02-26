@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>  
+<title>Provisional test web app</title>   
+<link rel="stylesheet" type="text/css" href="{% static 'provisionalTests/style.css' %}">
+<script  src="{% static 'provisionalTests/jquery.js' %}"></script>
+<script  src="{% static 'provisionalTests/home.js' %}"></script>
+<script type="text/javascript"></script>
+</head> 
+<body>
+    <div class="car_bg">
+       <div class="h_header"><h1 >PROVISIONAL <img src="{% static 'provisionalTests/images/flag.png' %}" />   PRACTICE</h1></div>
+
+    
+       <div class="test_arr">
+
+        <a href="{% url 'test' %}">  
+        <div class="first_tic">
+           <div class="t_icon"><img src="{% static 'provisionalTests/images/test.png' %}" /></div>
+           <div class="ds_t">TEST</div>
+         </div><!-- end of class first_tic -->
+         </a>
+
+         <a href="{% url 'notes' %}"> 
+         <div class="second_pic">
+           <div class="p_icon"><img src="{% static 'provisionalTests/images/notes.jpg' %}" /></div>
+           <div class="ds_t">NOTES</div>
+        </div><!-- end of class second_pic -->
+         </a>
+
+        <a>  
+        <div class="third_pic">
+            <div class="p_icon"><img src="{% static 'provisionalTests/images/tees.png' %}" /></div>
+            <div class="ds_t">Ts & Cs</div>
+         </div><!-- end of class third_pic -->
+         </a>
+
+    </div><!-- end of class test_arr -->
+   </div><!-- end of class car_bg -->
+</body>
+</html>

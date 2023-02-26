@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Pass your test!!</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{% static 'provisionalTests/style.css' %}">
+<script  src="{% static 'provisionalTests/jquery.js' %}"></script>
+<script  src="{% static 'provisionalTests/test.js' %}"></script>
+<script type="text/javascript"> 
+ 
+/*The javascript in this section handles the timer for the provisional test
+  I have set the time manually to 8 minutes.
+  
+  In the future i plan to implement authentication so that the progress of the
+  user can be tracked. I plan to introduce the easy to hard like in the games.
+
+  The more the user get used to the questions, the time to complete the test will 
+  be reduced as well. I hope it will be interesting that way.
+*/
+    var mins = 8;     
+    var secs = 60;
+    setInterval(function() {
+      secs = secs - 1;       
+
+      if(secs == 59){
+        mins = mins - 1;
+      }
+      if(secs == -1){          
+        secs = 59;
+        mins = mins - 1;
+      }        
+      if(secs < 10){
+        secs = '0'+secs;
+      }
+      if(mins == 0 & secs == 0){
+           $("#form").submit();
+      }  
+      if(mins <= 3){
+        $('.min_sec').css('color','red');  
+        $('.tpic').html('<img   src="{% static 'provisionalTests/images/red.png' %}" />'); 
+        $('.time').css('background','black');    
+      }   
+
+      $('.mins').html(mins+'m');  
+      $('.secs').html(secs+'s');     
+    }, 1200);
+
+</script>
+</head>
+<body>
+  
+<div class="all">
+
+<div class="header">
+    <div class="prevB">
+      <a href="{% url 'home' %}">  
+      <img src="{% static 'provisionalTests/images/prevB.png' %}" />
+      </a>
+    </div><!-- end of class prevB -->
+    <div class="name">Provisional Test</div>
+    <div class="time">
+      <div class="tpic"><img src="{% static 'provisionalTests/images/time.png' %}" /></div>
+        <div class="min_sec">
+          <div class="mins">08</div>:
+          <div class="secs">00</div>
+        </div><!-- end of class  min_sec  -->  
+    </div><!-- end of class time -->
+</div><!-- end of class header --> 
+ 
+{% if questions %}
+    <form method="post"  action="{% url 'marks' %}" id="form" enctype="multipart/form-data">
+    {% csrf_token %}    
+    <input type="hidden" name ="total" value="{{num}}" />
+    {% for question in questions %}
+    <div class="single_question">
+        <h3 class="qsn_txt"> {{ forloop.counter}}) {{question.question }} </h3>
+        
+        <input type="hidden"  name="qsn{{ forloop.counter }}" value="{{ question.id }}">           
+
+        <img src="{{ question.Q_Image.url }}" class="thePicQ"/>       
+         
+        {% for answer in question.answers_set.all %}       
+        
+        <div class="first_q">
+            <input type="radio"  id="{{ answer.choice_one }}" class="radio" name="answer{{question.id}}"  value="{{ answer.choice_one }}">            
+            <label for="{{ answer.choice_one }}">{{ answer.choice_one }}</label> 
+        </div><!-- end of class first_q -->
+        
+        <div>
+            <input type="radio"  id="{{ answer.choice_two }}" class="radio" name="answer{{question.id}}" value="{{ answer.choice_two }}">
+            <label for="{{ answer.choice_two }}">{{ answer.choice_two }}</label>
+        </div><!-- end of class second_q -->
+         
+        <div>
+            <input type="radio" id="{{ answer.choice_three }}" class="radio" name="answer{{question.id}}"  value="{{ answer.choice_three }}">
+            <label for="{{ answer.choice_three }}">{{ answer.choice_three }}</label>
+        </div> <!-- end of class third_q -->       
+         
+        <!-- the dummy radio, it wont be visible on the screen -->
+        <input type="radio" checked = "checked"  class="checked" name="answer{{question.id}}"  value="nothing"  />       
+        {% endfor %}
+
+        <div class="prev_next">
+            <div class="prev"><img   src="{% static 'provisionalTests/images/back.png' %}" /></div>
+            <div class="next"><img   src="{% static 'provisionalTests/images/next.png' %}" /></div>
+        </div> <!-- end of class prev_next --> 
+        
+    </div><!-- end of class single_question --> 
+    
+    {% endfor %}   
+    <input type="submit" class="finish" value="FINISH TEST" />
+</form> 
+
+{% endif %} 
+<div class="prog"></div>
+
+</div><!-- end of class all -->
+
+</body>
+</html>

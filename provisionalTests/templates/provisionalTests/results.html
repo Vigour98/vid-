@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Your test results</title>   
+<link rel="stylesheet" type="text/css" href="{% static 'provisionalTests/style.css' %}">
+<script  src="{% static 'provisionalTests/jquery.js' %}"></script>
+<script  src="{% static 'provisionalTests/results.js' %}"></script>
+</head>  
+
+<body>
+<div class="results">
+
+<div class="mark">{{ marks }}</div>  
+<div class="total">{{ total }}</div> 
+
+<div class="res_img">
+
+   <div class="h_btn">
+      <a href="{% url 'home' %}">
+       <img src="{% static 'provisionalTests/images/home.png' %}" />
+       <small>HOME</small>
+      </a>
+   </div><!-- end of class h_btn -->
+   
+   <div class="res_pic">
+   <div class="results_rep">
+       <h2>Your Test Results</h2>
+       <div class="perc"></div>
+       <div class="p_f"></div>
+   </div><!-- end class results_rep -->
+
+   <div class="car_r"><img src="{% static 'provisionalTests/images/car6.png' %}" /></div>
+
+   </div><!-- end of class res_pic -->
+   
+   <div class="r_btn">
+      <a href="{% url 'test' %}">
+         <img src="{% static 'provisionalTests/images/retry.png' %}" />
+         <small>RETRY</small>
+      </a>
+   </div><!-- end of class h_btn -->
+
+</div><!-- end of class res_img -->
+
+
+<div class="pare_of_corr">
+{% for answers in corrections %} 
+
+{% if answers.3 == 'black' %}
+<div class="corrections">  
+   <h3><div>{{forloop.counter}})</div>{{ answers.0 }}</h3>
+   <img src="{{ answers.2.url }}" />
+   <p><i>Answ)</i>{{ answers.1 }}</p>  
+</div><!-- end of class corrections --> 
+{% endif %} 
+
+{% if answers.3 == 'red' %}
+<div class="corrections2">  
+   <h3><div>{{forloop.counter}})</div>{{ answers.0 }}</h3>
+   <img src="{{ answers.2.url }}" />
+   <p><i>Answ)</i>{{ answers.1 }}</p>  
+</div><!-- end of class corrections --> 
+{% endif %} 
+
+{% endfor %}
+</div><!-- end of class pare_of_corr --> 
+
+<div class="wheels">
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div> 
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>
+  <div><img src="{% static 'provisionalTests/images/wheel.png' %}" /></div>   
+</div><!-- end of class wheels -->
+
+</div><!-- end of class results -->
+
+</body>
+</html>

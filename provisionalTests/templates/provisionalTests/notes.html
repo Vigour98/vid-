@@ -1,0 +1,385 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>  
+<title>Provisional notes!</title> 
+<link rel="stylesheet" type="text/css" href="{% static 'provisionalTests/style.css' %}">
+<script  src="{% static 'provisionalTests/jquery.js' %}"></script>
+<script  src="{% static 'provisionalTests/vid.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ //the following are the buttons
+intro = $('.int_b');
+about = $('.about_b');
+classB = $('.class_b');
+rules = $('.rule_b');
+controls = $('.con_b');
+manov = $('.manov_b');
+stopB = $('.stop_b');
+
+arr = [intro, about, classB, rules, controls, manov, stopB] //buttons array
+$('.int_b').css({background:'black',color:'grey'});
+
+//the following are the views which correspond to the buttons
+
+introV = $('.introduction');
+aboutV = $('.about');
+classV = $('.classes');
+rulesV = $('.rules');
+conV = $('.con_sig');
+manV = $('.manov');
+distV = $('.dist');
+
+arr2 = [introV, aboutV, classV, rulesV, conV, manV, distV];// view list
+
+$('.prov_list ul li').click(function(){ 
+
+    
+    for(i=0; i<arr2.length; i++){  
+        arr[i].css({
+                    background:'radial-gradient(white,black)',
+                    color:'black'
+                   });
+        if(arr2[i].hasClass("init") == true){
+             arr2[i].removeClass("init").addClass("hide");      
+            }
+    }
+
+    $(this).css({
+                 background:'black',
+                 color:'grey'
+                });
+
+   if($(this).hasClass("int_b") == true){
+      $('.introduction').removeClass("hide").addClass("init");     
+    }
+
+    if($(this).hasClass("about_b") == true){
+      $('.about').removeClass("hide").addClass("init");     
+    }
+
+    if($(this).hasClass("class_b") == true){
+      $('.classes').removeClass("hide").addClass("init");     
+    }
+
+    if($(this).hasClass("rule_b") == true){
+      $('.rules').removeClass("hide").addClass("init");     
+    }
+
+    if($(this).hasClass("con_b") == true){
+      $('.con_sig').removeClass("hide").addClass("init");     
+    }
+
+    if($(this).hasClass("manov_b") == true){
+      $('.manov').removeClass("hide").addClass("init");     
+    }
+
+    if($(this).hasClass("stop_b") == true){
+      $('.dist').removeClass("hide").addClass("init");     
+    }
+
+    
+
+}); //end of the click function
+
+
+
+
+});//end of the ready function
+
+</script>
+</head> 
+<body>
+<div class="all">
+
+<div class="home_header">
+    <a href="{% url 'home' %}">
+      <img src="{% static 'provisionalTests/images/prevB.png' %}" class='pic'/>
+    </a>
+    <div class="for_h1">        
+         <h1>Zim Driving</h1>      
+    </div><!-- end of class for_h1 -->    
+</div> <!-- end of class home_header -->
+
+<div class="list_detail">
+    
+
+<div class="prov_list">
+    <ul>
+        <li class="int_b">Introduction</li>
+        <li class="about_b">About Tests</li>
+        <li class="class_b">Vehicle Classes</li>
+        <li class="rule_b">Intesection Rules</li>
+        <li class="con_b">Controls</li>
+        <li class="manov_b">Manouvering</li>
+        <li class="stop_b">Stopping Distances</li>
+    </ul>
+</div><!-- end of class prov_list -->
+
+
+<div class="detail">
+<div class="introduction  init">
+<h1>Introduction</h1>
+<p>The Law in Zimbabwe requires that, before advancing to the 
+    steering wheel one should be a holder of a Provisional Learner's
+    licence. The Provisional Learner's consists of 25 multiple choice 
+    questions and you are expected to score at least 22 points.<br><br>
+
+    The new structure of questions requires that you possess a sound knowledge
+    of practical driving techniques and make use of common driving sense.
+    Best way is to read such questions fast and use only logical driving 
+    reasoning when choosing the correct answer.
+
+    <br><br>
+    <i>Please note that it is usually only the theoretical aspect of driving that
+        you may pass through using this tutorial. The road test requires much
+        more practical teaching techniques that are beyond this tutorial's scope.
+    </i>
+</p>
+</div><!-- end of class introduction -->
+
+<div class="about hide">
+    <h1>ABOUT MULTIPLE CHOICE TEST</h1>
+    <div class="the_Ps">
+        <h2>Requirements</h2>
+    <p>1)Three (black & white) D.L photos.</p>
+    <p>2)Valid Passport or National Identity Card (ID).</p>
+    <p>3)A Registration/Booking fee</p>
+        <h2>Pass Marks</h2>
+    <p><b>Classes 2, 3, 4&5 </b>   = 22/25 = 88%</p> 
+    <p><b>Class One</b> = 100%</p>  
+    <h2>Test's Duration</h2> 
+    <p><b>You have to answer the 25 questions in about 8 minutes</b></p> 
+    </div><!-- end of Ps -->
+</div><!-- end of class about -->
+
+<div class="classes hide">
+<h1>Vehicle Classes</h1>
+<div class="Ps">
+<p>**<b>Class 4</b>** = Cars (Light Motor Vehicle Licence).</p>
+<p>**<b>Class 3</b>** = Motorcycles.</p>
+<p>Age limit to obtain licence for applicants = 16 years.</p>
+<br><br>
+
+<p>**<b>Class 1,2 and 5</b>**are classes for Heavy Vehicles.</p>
+<p>Age limit to obtain licence for applicants = 18 years.</p>
+<br>
+
+<p>**<b>Class 1</b>** is for Buses.</p>
+<p>**<b>Class 2</b>** is for Lorries.</p>
+<p>**<b>Class 5</b>** is for Construction and Agricultural Vehicles</p>
+<br>
+
+<p>A person is allowed to operate public serice vehicle at the age of
+    25 years.
+</p>
+<p>A public service vehicle is one which carries passengers for 
+    commercial purposes, e.g. buses and commuter omnibuses.
+</p>
+</div><!-- end of class Ps -->
+</div><!-- end of class classes-->
+
+<div class="rules hide">
+<h1>INTERSECTIONS & DIAGRAM RULES</h1>
+
+<div class="rulesP">
+<p><i>We use the following rules only at intersections not controlled
+    by the Police and when answering diagram questions.
+</i></p>
+
+<h2>RULE 1</h2>
+<p>No car should turn right in the face of oncoming traffic.</p>
+
+<h2>RULE 2</h2>
+<p>A car should stop and giveway to any traffic approaching 
+    from its right.
+</p>
+
+
+<h2>RULE 3</h2>
+<p>Where there is more than two cars: A car can move to the centre
+    if it has nothing approaching from its right.
+</p>
+
+
+<h2>RULE 4</h2>
+<p>Where there is more than two cars and neither of them is turning 
+    right: Traffic in the same road can move at the same time.
+</p>
+
+
+<h2>RULE 5</h2>
+<p>At a roundabout give the right of way to traffic that is already 
+    circulating and all that is approaching from your right.
+</p>
+
+<h2>RULE 6</h2>
+<p>At CONTROLLED INTERSECTIONS any car facing a Stop or Giveway 
+Sign is the last car to go.</p>
+
+</div><!-- end of class rulesP -->
+</div><!-- end of class rules -->
+
+<div class="con_sig hide">
+<h1>EFFECTS AND PURPOSE OF CONTROLS</h1>
+
+<div class="conP">
+<h3>Accelerator</h3>
+
+<p>Pedal is situated on the right side.</p>
+<p>Purpose being to increase speed.</p>
+<p>Is operated by the right foot.</p>
+
+<h3>Brake</h3>
+<p>Pedal situated on the centre.</p>
+<p>Purpose being to slow down the vehicle.</p> 
+<p>It is operated by the right foot.</p>
+
+<h3>Clutch</h3>
+<p>Pedal situated on the left side.</p>
+<p>Purpose being to engage/disengage gears.</p>
+<p>It is operated independently by the left foot.</p>
+
+<h3>Gear Lever</h3>
+<p>The lever is situated at the centre.</p>
+<p>Purpose being to select gears.</p>
+<p>Operated by the left or right hand depending on its position</p>
+
+<h1>HAND SIGNALS</h1>
+<p>Raising your hand up and down slowly is signal for slowing down.</p>
+<p>Pointing your hand to the right signals turning right.</p>
+<p>Rolling your hand forward and backward in circles signals turning left.</p>
+<p>Raising your hand up signals stopping. </p>
+
+</div><!-- end of class conP -->
+</div><!-- end of class con_sig -->
+
+<div class="manov hide">
+    <h1>MANOUVERING PROCEDURES</h1>  
+
+    <div class="start_change">
+    <div class="start_ve">
+    <h4>Starting vehicle</h4>
+    <p>1.Check the handbrake.</p>
+    <p>2.Depress the clutch.</p>
+    <p>3.Put gear into neutral.</p>
+    <p>4.Turn key on and check dashboard indications.</p>
+    <p>5.Start engine</p>
+    </div><!-- end of class start_v -->
+
+    <div class="change_g">
+    <h4>Changing of gears, up or down</h4>
+    <p>1.Release accelerator.</p>
+    <p>2.Depress the clutch.</p>
+    <p>3.Engage into required gear.</p>
+    <p>4.Release the clutch.</p>
+    <p>5.Accelerate or decelerate depending on desired course of action.</p>
+    </div><!-- end of class change_g -->
+    </div><!-- end of class start_change -->
+    
+    <div class="turn_lane">
+    <div class="turnR">
+    <h4>Turning Right Procedure</h4>
+    <p>1.Check mirror.</p>
+    <p>2.Show desired intention.</p>
+    <p>3.Brake.</p>
+    <p>Slow down.</p>
+    <p>Select suitable gear and then turn.</p>
+    </div><!-- end of class turnR -->  
+    
+    <div class="laneC">
+    <h4>Lane changing Procedure</h4>
+    <p>1.Check rear view mirror.</p>
+    <p>2.Put on electrical signal.</p>
+    <p>3.Check blind spot.</p>
+    <p>4.Make hand signal.</p>
+    </div> <!-- end of class laneC -->
+
+    <div class="switch_off">
+        <h4>Switch off Procedure</h4>
+        <p>1.Release accelerator.</p>
+        <p>2.Depress clutch.</p>
+        <p>3.Put gear into neutral.</p>
+        <p>4.Engage handbrake.</p>
+        <p>Turn off engine immediately if non turbo charged.</p>
+        </div> <!-- end of class switch_off -->
+
+    </div><!-- end of class turn_lane -->
+
+    <div class="pull_straight">
+    <div class="pullS">
+    <h4>Pull of to stop procedure</h4>
+    <p>1.Check the mirror.</p>
+    <p>2.Reduce speed.</p>
+    <p>3.Check blind spot.</p>
+    <p>4. Pull off and stop.</p>
+    </div><!-- end of class pullS -->
+
+    <div class="straightP">
+    <h4>Going straight Procedure at uncontrolled intersection</h4>
+    <p>1.Slow down.</p>
+    <p>2.Check both sides and Give way to traffic from your right</p>
+    <p>3.If clear, Continue on straight as desired.</p>
+    </div> <!-- end of class straightP --> 
+    </div> <!-- end class pull_straight -->
+
+</div><!-- end of manov-->
+
+<div class="dist hide">
+    <h1>STOPPING DISTANCES</h1>
+
+    <div class="distP">
+    <p>Drivers should always leave a safe following Distances
+        When travelling behind a vehicle with no intention of overtaking,
+        always divide your car speed by the number 15. The result you get 
+        is the number of cars you leave a <b>gap</b> for in front of your 
+        vehicle.
+    </p>
+
+<table>
+    <tr>
+        <th>SPEED</th>
+        <th>GAP</th>
+        <th>REACTION DISTANCE</th>
+        <th>BREAKING DISTANCE</th>
+        <th>STOPPING DISTANCE</th>
+    </tr>
+
+    <tr>
+        <td>40km/h</td>
+        <td>2,7</td>
+        <td>5,6m</td>
+        <td>12,4m</td>
+        <td>18m</td>
+    </tr>
+
+    <tr>
+        <td>60km/h</td>
+        <td>4</td>
+        <td>8,3m</td>
+        <td>27,7m</td>
+        <td>36m</td>
+    </tr>
+
+    <tr>
+        <td>120km/h</td>
+        <td>8</td>
+        <td>16,7m</td>
+        <td>113,3m</td>
+        <td>130m</td>
+    </tr>
+</table>
+
+</div><!-- end of class distP -->
+</div><!-- end of class dist -->
+
+
+</div><!-- end of class detail -->
+
+
+</div><!-- end of class list_detail -->
+
+</div> <!-- end of class all -->
+
+</body>
+</html>
